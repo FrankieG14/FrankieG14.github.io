@@ -2671,6 +2671,14 @@ input, select, textarea {
 		display: flex;
 	}
 
+	.spotlight2 {
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.05);
+	}
+
 		.spotlight .image {
 			-moz-order: 1;
 			-webkit-order: 1;
@@ -2680,10 +2688,10 @@ input, select, textarea {
 			width: 40%;
 		}
 
-			.spotlight .image img {
-				border-radius: 0;
-				width: 100%;
-			}
+		.spotlight .image img {
+			border-radius: 0;
+			width: 100%;
+		}
 
 		.spotlight .content {
 			padding: 2em 4em 0.1em 4em ;
@@ -2695,12 +2703,19 @@ input, select, textarea {
 			width: 60%;
 		}
 
+		.spotlight2 .content {
+			padding: 2em 4em 0.1em 4em ;
+		}
+
+
+
 		.spotlight:nth-child(2n) {
 			-moz-flex-direction: row-reverse;
 			-webkit-flex-direction: row-reverse;
 			-ms-flex-direction: row-reverse;
 			flex-direction: row-reverse;
 		}
+
 
 		.spotlight:nth-child(1) {
 			background-color: rgba(0, 0, 0, 0.075);
@@ -2749,7 +2764,15 @@ input, select, textarea {
 			}
 
 			.spotlight .content {
-				width: 55%;
+				width: 50%;
+			}
+
+			.spotlight .content iframe {
+				width: 50%;
+			}
+
+			.spotlight2 .content {
+				width: 100%;
 			}
 
 		}
@@ -2775,11 +2798,21 @@ input, select, textarea {
 					width: 100%;
 				}
 
+				.spotlight2 .content {
+					padding: 4em 3em 2em 3em ;
+					max-width: none;
+					text-align: center;
+					width: 100%;
+				}
+
 		}
 
 		@media screen and (max-width: 736px) {
 
 			.spotlight .content {
+				padding: 3em 2em 1em 2em ;
+			}
+			.spotlight2 .content {
 				padding: 3em 2em 1em 2em ;
 			}
 
