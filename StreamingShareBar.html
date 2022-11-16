@@ -1,0 +1,49 @@
+<html>
+<style>
+  body {
+    font-family: Times New Roman, Times, serif;
+    font-size: 10px;
+  }
+
+  .chart text {
+    font: 24px Arial;
+    fill: Gainsboro;
+  }
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: gainsboro;
+    shape-rendering: crispEdges;
+  }
+
+  .axis text,
+  .legend text {
+    font: 12px Arial;
+    fill: gainsboro;
+  }
+  div.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+    font: 12px sans-serif;
+    background: Gainsboro;
+    border: 1px;
+    pointer-events: none;
+    font-weight: bold;
+  }
+</style>
+<head>
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+  <script src="//colorbrewer2.org/export/colorbrewer.js"></script>
+
+  <head>
+    <title>Bar chart with a Sequential color scale</title>
+  </head>
+</head>
+<body>
+<svg class="chart" width="960" height="485"></svg>
+<script src="StreamingShareBar.js"></script>
+</body>
+</html>

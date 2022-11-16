@@ -16,20 +16,23 @@ const svg = d3.select("#my_dataviz")
 // Parse the Data
 d3.csv("songs_normalize_condensed.csv").then( function(data) {
 
-
-
     data.forEach(d =>{
         d.artist = d["artist"];
         d.popularity = +d["popularity"]; //Using '+'
         d.energy = +d["energy"]; //Using '+'
         d.key = +d["key"]; //Convert the jobsLost column using '+' and column name
-        d.loudness = d["loudness"];
-        d.tempo = d["tempo"];
+        d.loudness = +d["loudness"];
+        d.tempo = +d["tempo"];
     })
+
+    console.log(data)
 
     // Color scale
     const color = d3.scaleOrdinal()
+        .domain(data.map(d => d.artist))
         .range(d3.schemeSet2);
+
+
 
     // Here I set the list of dimension manually to control the order of axis:
     dimensions = ["Energy", "Key", "Popularity", "Loudness", "Tempo"]
@@ -41,8 +44,9 @@ d3.csv("songs_normalize_condensed.csv").then( function(data) {
         y[name] = d3.scaleLinear()
             //.domain( [0,8] ) // --> Same axis range for each group
             // --> different axis range for each group -->
-            .domain( [d3.extent(data, function(d) { return +d[name]; })] )
+            .domain( [d3.extent(data, function(d) { return d[name]; })] )
             .range([height, 0])
+        console.log([d3.extent(data, function(d) { return d[name]; })])
     }
 
     // Build the X scale -> it find the best position for each Y axis
@@ -76,6 +80,7 @@ d3.csv("songs_normalize_condensed.csv").then( function(data) {
     // The path function take a row of the csv as input, and return x and y coordinates of the line to draw for this raw.
     function path(d) {
         return d3.line()(dimensions.map(function(p) {
+            //console.log([x(p), y[p], d, d[p], y[p](d[p])])
             return [x(p), y[p](d[p])];
         }));
     }
@@ -85,7 +90,7 @@ d3.csv("songs_normalize_condensed.csv").then( function(data) {
         .selectAll("myPath")
         .data(data)
         .join("path")
-        .attr("class", function (d) { return "line " + d.artist } ) // 2 class for each line: 'line' and the group name
+        .attr("class", function (d) { return d.artist } ) // 2 class for each line: 'line' and the group name
         .attr("d",  path)
         .style("fill", "none" )
         .style("stroke", function(d){ return( color(d.artist))} )

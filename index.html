@@ -19,7 +19,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.html">Spectral</a></h1>
+						<h1><a href="index.html">Spotify Analytics</a></h1>
 						<nav id="nav">
 							<ul>
 								<li class="special">
@@ -41,7 +41,7 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-							<h2>Spotify: What Your Favorite Artist Says About You</h2>
+							<h2>Spotify: What your music says about you</h2>
 							<p>By Frank Guglielmo</p>
 
 							<p>A deep analysis into the most popular (and unpoular) Spotify Songs as well as the growth of the platform and its artists</p>
@@ -58,14 +58,14 @@
 								<p>This project hopes to answer various questions related to the platform Spotify, the reasoning behind the virality of certain artists, and how it stacks up against other music streaming platforms like Apple Music, Youtube, Amazon Prime, etc.</p>
 							</header>
 							<ul class="icons major">
-								<li><a href="#Objective 1" class="more scrolly"><span class="icon fa-gem major style1"><span class="label">Objective 1</span></span></a>
+								<li><a href="#Objective 1" class="more scrolly"><span class="icon fa-heart major style2"><span class="label">Objective 1</span></span></a>
 									<p><br />What Makes a song  <br /> popular?</p>
 								</li>
-								<li><a href="#Objective 2" class="more scrolly"><span class="icon fa-heart major style2"><span class="label">Objective 2</span></span></a>
-									<p><br />Apple Music <br />vs. Spotify</p>
+								<li><a href="#Objective 2" class="more scrolly"><span class="icon fa-gem major style1"><span class="label">Objective 2</span></span></a>
+									<p><br />Spotify vs. <br /> Apple Music</p>
 								</li>
 								<li><a href="#Objective 3" class="more scrolly"><span class="icon solid fa-code major style3"><span class="label">Objective 3</span></span></a>
-									<p><br />What does your music <br />taste say about you?</p>
+									<p><br />How common is<br />your music taste?</p>
 								</li>
 							</ul>
 						</div>
@@ -81,8 +81,17 @@
 							</div>
 						</section>
 						<section class="spotlight2">
+
 							<div class="content">
-							<iframe src="ParallelCoordinates.html" width="100%" height="490"></iframe>
+								<p>To use this chart, try brushing over a few of the axes to see what qualities each song has. Each line is a different song. Try starting by brushing over the popularity axis to see what qualities make a song popular or unpopular.</p>
+							<iframe src="parallelNew.html" width="100%" height="490"></iframe>
+								<ul>
+									<li><p>Popularity: The higher the value the more popular the song is.</p></li>
+									<li><p>Danceability: Describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable.</p></li>
+									<li><p>Energy: A measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity.</p></li>
+									<li><p>Loudness: The overall loudness of a track in decibels (dB). Loudness values are averaged across the entire track and are useful for comparing relative loudness of tracks. Loudness is the quality of a sound that is the primary psychological correlate of physical strength (amplitude). Values typically range between -60 and 0 db.</p></li>
+									<li><p>Tempo: The overall estimated tempo of a track in beats per minute (BPM). In musical terminology, tempo is the speed or pace of a given piece and derives directly from the average beat duration.</p></li>
+								</ul>
 							</div>
 						</section>
 						<section></section>
@@ -91,16 +100,14 @@
 							<div class="content">
 								<h2>A Look into "Danceability"</h2>
 								<p>Upon further looking at the data, I noticed a very interesting attribute: "Danceability." By viewing the scatterplot chart, if a song is popular, there's a good chance the danceability factor is high.</p>
-							</div>>
+							</div>
 
-							<iframe src="DanceabilityScatter.html" title="Danceability Bubble Chart" width="100%" height="500"></iframe>
+							<iframe src="DanceabilityScatter.html" title="Danceability Bubble Chart" width="100%" height="510"></iframe>
 
 						</section>
 						<section class="spotlight">
-							<div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
-								<h2>Augue eleifend aliquet<br />
-								sed condimentum</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+							<div class="image"><img src="images/dancing.jpg" alt="" /></div><div class="content">
+								<p>So what is "danceability?" The dictionary definition is "the quality or state of being able to move one's body rhythmically," but deep down it's more than that. We all have that one song that no matter when it comes on, we just have to get our grove on. "Danceability" is an uncontrollable feeling we get when we're moved by the sights and sounds within our environment. This is one of the reasons why music tells a lot about someone, since it can motivate such profound behavior.</p>
 							</div>
 						</section>
 					</section>
@@ -109,65 +116,53 @@
 					<section id="Objective 2" class="wrapper style3 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Accumsan mus tortor nunc aliquet</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+								<h2>Spotify vs. Apple Music</h2>
+								<p>It's the question we all ask when we're talking about music. Although both are extremely popular, the tribalism that exists between Spotify and Apple Music is as intense as Xbox vs. Playstation or Pepsi vs. Coca-cola. This divide affects how friend groups share music, discover new artists, and connect with other people.</p>
 							</header>
 							<ul class="features">
-								<li class="icon fa-paper-plane">
-									<h3>Arcu accumsan</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li>
+									<img src="images/spotifymeme1.jpeg" alt="Spotify Meme 1" width="400" height="300">
 								</li>
-								<li class="icon solid fa-laptop">
-									<h3>Ac Augue Eget</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
 								</li>
-								<li class="icon solid fa-code">
-									<h3>Mus Scelerisque</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li>
+									<img src="images/spotifymeme2.jpg" alt="Spotify Meme 2" width="400" height="300">
 								</li>
-								<li class="icon solid fa-headphones-alt">
-									<h3>Mauris Imperdiet</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li>
+									<img src="images/spotifymeme3.jpg" alt="Spotify Meme 3" width="400" height="375">
 								</li>
-								<li class="icon fa-heart">
-									<h3>Aenean Primis</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-flag">
-									<h3>Tortor Ut</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li>
+									<img src="images/spotifymeme4.jpg" alt="Spotify Meme 4" width="400" height="375">
 								</li>
 							</ul>
 						</div>
+
+<!--						Bar Charts-->
+
+						<div class="inner">
+							<p>As you can see, Spoitfy anf Apple Music take up much of the overall streaming spare space.</p>
+							<iframe src="StreamingShareBar.html" width="100%" height="510" text-align="center"></iframe>
+							<p>Over the last few years, Spotify has made a tremendous leap from having about 30 million subscribers to almost 180 million, while Apple Music went from around 10 million in 2015 to about 80 in 2021.</p>
+							<iframe src="AppleVSpotify.html" width="100%" height="510"></iframe>
+						</div>
+
 					</section>
 
 				<!-- CTA -->
-					<section id="Objective 3" class="wrapper style4">
+					<section id="Objective 3" class="wrapper style5">
 						<div class="inner">
 							<header>
-								<h2>Arcue ut vel commodo</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
+								<h2>How common is your music taste?</h2>
+								<p>What's your favorite genre? If you listen to mostly Hip Hop, Pop, or Rock, you share a music taste with the majority of people. Although you may like a specific genre, the bigger fields tend to be really diverse in their own right. You may really like Hip Hop, but none of the main stream artists interest you. In that case, let me know who your favorite artists are, since I'm always looking for new music.</p>
+								<p>Regardless however, whether you have a common taste or an incredibly unique one, it's still yours, and you should own it!</p>
 							</header>
-							<ul class="actions stacked">
-								<li><a href="#" class="button fit primary">Activate</a></li>
-								<li><a href="#" class="button fit">Learn More</a></li>
-							</ul>
+							<iframe src="BubbleGenre.html" width="100%" height="700"></iframe>
 						</div>
 					</section>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
+						<p>In case you were wondering about my taste, click here to view my <a href="https://open.spotify.com/genre/2021-page">Spotify Wrapped 2021</a>.</p>
+						<p>CS360 Data Visualization Final Project</p>
 					</footer>
 
 			</div>

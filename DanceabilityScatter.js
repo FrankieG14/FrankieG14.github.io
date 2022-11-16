@@ -115,8 +115,9 @@ d3.csv("songs_normalize.csv").then(data =>{
         .attr("class", "x label")
         .attr("text-anchor", "end")
         .attr("x", width / 2 + 40)
-        .attr("y", height + 30)
+        .attr("y", height + 35)
         .style("font-size", "24px")
+        .style("fill", "gainsboro")
         .text("Popularity");
 //Create y-axis title
     svg.append("text")
@@ -127,6 +128,7 @@ d3.csv("songs_normalize.csv").then(data =>{
         .attr("dy", ".75em")
         .attr("transform", "rotate(-90)")
         .style("font-size", "24px")
+        .style("fill", "gainsboro")
         .text("Danceability");
 
 })
