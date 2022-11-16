@@ -100,9 +100,6 @@ function bubbleChart() {
         simulation.nodes(nodes)
             .on('tick', ticked)
             .restart();
-
-        simulation.nodes.call()
-        console.log("SIMULATION STARTED")
     }
 
     // callback function called after every tick of the force simulation
