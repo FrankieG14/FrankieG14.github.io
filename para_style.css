@@ -3,6 +3,7 @@ body {
     font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
     margin: 24px;
     line-height: 1.45em;
+    text-align: center;
 }
 a {
     color: #555;
@@ -46,3 +47,8 @@ h3 {
 input {
     font-size: 16px;
 }
+
+div #example parcoords {
+    text-align: center;
+}
+

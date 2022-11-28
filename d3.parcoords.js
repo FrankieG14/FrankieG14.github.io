@@ -6,7 +6,7 @@ d3.parcoords = function(config) {
         dimensionTitleRotation: 0,
         brushed: false,
         brushedColor: null,
-        alphaOnBrushed: 0.0,
+        alphaOnBrushed: 0.4,
         mode: "default",
         rate: 20,
         width: 600,
@@ -61,7 +61,8 @@ d3.parcoords = function(config) {
             .attr("width", __.width)
             .attr("height", __.height)
             .style("font", "14px sans-serif")
-            .style("position", "absolute")
+            .style("fill", "gainsboro")
+            .style("position", "center")
 
             .append("svg:g")
             .attr("transform", "translate(" + __.margin.left + "," + __.margin.top + ")");
@@ -681,7 +682,7 @@ d3.parcoords = function(config) {
     };
 
     function path_foreground(d, i) {
-        ctx.foreground.strokeStyle = d3.functor(__.color)(d, i);
+        ctx.foreground.strokeStyle = d3.functor("grey")(d, i);
         return color_path(d, ctx.foreground);
     };
 
@@ -836,12 +837,12 @@ d3.parcoords = function(config) {
 
                 axisElement.selectAll("path")
                     .style("fill", "none")
-                    .style("stroke", "#222")
+                    .style("stroke", "#b5cf6b")
                     .style("shape-rendering", "crispEdges");
 
                 axisElement.selectAll("line")
                     .style("fill", "none")
-                    .style("stroke", "#222")
+                    .style("stroke", "#b5cf6b")
                     .style("shape-rendering", "crispEdges");
             })
             .append("svg:text")
@@ -892,7 +893,7 @@ d3.parcoords = function(config) {
         }
         return this;
     };
-
+///////////
     pc.applyAxisConfig = function(axis, dimension) {
         return axis.scale(dimension.yscale)
             .orient(dimension.orient)
@@ -1852,7 +1853,7 @@ d3.parcoords = function(config) {
                 .style("fill", "transparent");
 
             brush.selectAll("rect.extent")
-                .style("fill", "rgba(255,255,255,0.25)")
+                .style("fill", "orange")
                 .style("stroke", "rgba(0,0,0,0.6)");
 
             brush.selectAll(".resize rect")

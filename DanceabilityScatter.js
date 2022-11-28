@@ -102,7 +102,7 @@ d3.csv("songs_normalize.csv").then(data =>{
         .attr("cx", d => x(d.popularity))
         .attr("cy", d => y(d.danceability))
         .attr("r", d => z(d.popularity))
-        .style("fill", d => myColor(d.artist))
+        .style("fill", "#1DB954")
         .style("opacity", "0.7")
         .attr("stroke", "black")
         // -3- Trigger the functions

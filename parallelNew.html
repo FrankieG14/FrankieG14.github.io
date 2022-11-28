@@ -9,7 +9,7 @@
 <script src="d3.js"></script>
 <script src="d3.svg.multibrush.js"></script>
 <script src="d3.parcoords.js"></script>
-<div id="example" class="parcoords" style="width:960px;height:400px;"></div>
+<div id="example" class="parcoords" style="width:100%;height:400px;"></div>
 
 
 
@@ -17,13 +17,13 @@
         // quantitative color scale
         var blue_to_brown = d3.scale.linear()
             .domain([9, 50])
-            .range(["steelblue", "brown"])
+            .range(["#1DB954"])
             .interpolate(d3.interpolateLab);
 
-        var color = function(d) { return blue_to_brown(d['economy (mpg)']); };
+        //var color = function(d) { return blue_to_brown(d['economy (mpg)']); };
 
         var parcoords = d3.parcoords()("#example")
-            .color(color)
+            .color("#1DB954")
             .alpha(0.4);
 
         // load csv file and create the chart
