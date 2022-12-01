@@ -3,6 +3,14 @@ const margin = {top: 10, right: 30, bottom: 20, left: 50},
     width = 900 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
+
+var div = d3
+    .select('body')
+    .append('div')
+    .attr('class', 'tooltip')
+    .style('opacity', 0);
+
+
 // append the svg object to the body of the page
 const svg = d3.select("#my_dataviz")
     .append("svg")
@@ -38,13 +46,13 @@ d3.csv("PremiumSubs_CS360Final.csv").then(data =>{
         .range([0, width])
         .padding([0.2])
     svg.append("g")
-        .attr("transform", `translate(0, ${height})`)
+        .attr("transform", `translate(0, ${height - 5})`)
         .call(d3.axisBottom(x).tickSize(0));
 
     // Add Y axis
     const y = d3.scaleLinear()
         .domain([0, d3.max(data, yValue)])
-        .range([ height, 0 ]);
+        .range([ height - 5, 0 ]);
     svg.append("g")
         .call(d3.axisLeft(y));
 
@@ -105,7 +113,35 @@ d3.csv("PremiumSubs_CS360Final.csv").then(data =>{
         .attr("x", d => xSubgroup(d.key))
         .attr("y", d => y(d.value))
         .attr("width", xSubgroup.bandwidth())
-        .attr("height", d => height - y(d.value))
-        .attr("fill", d => color(d.key));
+        .attr("height", d => height - y(d.value) - 5)
+        .attr("fill", d => color(d.key))
+        .on('mouseover', function (event, d) {
+        div
+            .transition()
+            .duration(200)
+            .style('opacity', 0.9);
+        div
+            .html(
+                d.value + " million subscribers"
+            )
+            .style('left', event.pageX + 'px')
+            .style('top', event.pageY - 28 + 'px');
+    })
+        .on('mouseout', function (d) {
+            div.transition().duration(500).style('opacity', 0);
+        })
+        .on('mousemove', function (event, d) {
+            div
+                .transition()
+                .duration(200)
+                .style('opacity', 0.9);
+            div
+                .html(
+                    d.value + " million subscribers"
+                )
+                .style('left', event.pageX + 'px')
+                .style('top', event.pageY - 28 + 'px');
+        });
+
 
 })

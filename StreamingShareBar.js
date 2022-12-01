@@ -89,7 +89,24 @@ function main() {
             })
             .on('mouseout', function (d) {
                 div.transition().duration(500).style('opacity', 0);
-            });
+            })
+            .on('mousemove', function (event, d) {
+                div
+                    .transition()
+                    .duration(200)
+                    .style('opacity', 0.9);
+                div
+                    .html(
+                        d.code +
+                        ': ' +
+                        formatDecimal(d.horsepower) + '%'
+                    )
+                    .style('left', event.pageX + 'px')
+                    .style('top', event.pageY - 28 + 'px');
+            })
+            .on('mouseout', function (d) {
+                div.transition().duration(500).style('opacity', 0);
+            });;
 
         //Add Title
         svg
